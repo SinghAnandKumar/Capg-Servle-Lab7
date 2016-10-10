@@ -36,7 +36,7 @@
 --%>
 
 <c:if test="${param.addToList ne null}">
-	<c:redirect url="categories.html"/>
+	<c:redirect url="bookCatelogue.jsp"/>
 </c:if>
 
 </body>

@@ -20,7 +20,18 @@
 <%-- TODO:1 Use JSTL action (forEach) and EL EXPRESSIONS to display product details from 
 		scoped variable "productIds" and "entries.products" as HTML CHECKBOXES
 --%>
+<c:forEach items="${productIds}" var="id" items:"${entries.products}" var2="entry">
+$ {id.id}
+${entry.key}
+${entry['value'][0]}
+</c:forEach>
 
+<%-- <c:forEach items:"${entries.products}" var="entry">
+
+
+</c:forEach>
+
+ --%>
 	<br/>
 	<input type="submit" value="Add to Wish List & shop more?" name="addToList"/>
 	<input type="submit" value="Check Out" name="checkout"/>
