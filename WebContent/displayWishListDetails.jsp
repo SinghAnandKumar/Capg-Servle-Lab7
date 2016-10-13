@@ -16,19 +16,19 @@
 <body>
 
 <h2> 
-Customer Billing details
+Customer Billing details</h2>
 <br/>
 
 <%-- TODO:1 Use standard action (jsp:usebean) to obtain scoped variable "userDetails" from session scope--%>
 <jsp:useBean id="userDetails" type="com.seed.beans.Customer" scope="session"/>
 
 <%-- TODO:2 get "name" property of "userDetails" and display it--%>
- ${userDetails.name}
+ ${userDetails.getName()}
 
 <%-- TODO:3 get "mobile" property of "userDetails" and display it--%>
- ${userDetails.mobile}
+ ${userDetails.getMobile()}
 <%-- TODO:4 get "pincode" property of "userDetails" and display it--%>
-${userDetails.pincode}
+${userDetails.getPincode()}
 
 <%-- TODO:5 Use JSTL action (forEach) and EL EXPRESSIONS to display product details from 
 		scoped variable "wishList" using its property "productSet"
@@ -39,19 +39,18 @@ Wish-List contents
 <br/>
 
 <table>
-	<c:forEach items="${wishList} }<%-- TODO:6 required EL EXPRESSION to get property of wishList--%>" var="productId">
-	
+	<c:forEach items='${wishList}' var='productId'><%-- TODO:6 required EL EXPRESSION to get property of wishList--%>
 		<tr>
-			<td>${productId.id}<%-- TODO:7 required EL EXPRESSION to display id of product--%></td>
-			<td>${productId.name}<%-- TODO:8 required EL EXPRESSION to display name of product--%></td>
-			<td>${productId.price}<%-- TODO:9 required EL EXPRESSION to display id of product--%></td>
+			<td>${productId.getId()}<%-- TODO:7 required EL EXPRESSION to display id of product--%></td>
+			<td>${productId.getName()}<%-- TODO:8 required EL EXPRESSION to display name of product--%></td>
+			<td>${productId.getPrice()}<%-- TODO:9 required EL EXPRESSION to display id of product--%></td>
 		</tr>
 	
 	</c:forEach>
 	
-
 </table>
-</h2>
+
+
 
 </body>
 </html>

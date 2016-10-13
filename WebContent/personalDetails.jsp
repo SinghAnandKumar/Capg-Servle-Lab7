@@ -26,15 +26,15 @@ Pin Code<input style="width: 163px" name="pincode"> <br>
 
 <%-- TODO:2 Use standard action (jsp:usebean) to obtain scoped variable "userDetails" from session scope--%>
 
-	<jsp:useBean id="userDetails" class="com.seed.beans.Customer"
-		scope="session" />
+	<jsp:useBean id="userDetails" class="com.seed.beans.Customer" scope="session" />
 
-<%-- TODO:3 set all properties of "userDetails" java bean from coresponding HTML request parameters--%>
+<%-- TODO:3 set all properties of "userDetails" java bean from corresponding HTML request parameters--%>
 	<jsp:setProperty name="userDetails" property="*" />
 
 	<%--  TODO:4 forward current request to "displayWishListDetails.jsp"--%>
 	
 	<jsp:forward page="displayWishListDetails.jsp" />
+	
 </c:if>
 
 </body>

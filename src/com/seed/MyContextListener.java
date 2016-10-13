@@ -19,7 +19,7 @@ public class MyContextListener implements ServletContextListener{
 		productsRepositoryRef = new ProductsRepositoryInMemoryImpl();
 
 		Map<Integer, Product> productEntries = productsRepositoryRef.getProductEntries();
-
+		
 		ServletContext application = event.getServletContext();
 
 //		Assign scoped variable names(attribute) for product repository in APPLICATION_SCOPE
@@ -29,6 +29,7 @@ public class MyContextListener implements ServletContextListener{
 //		Assign scoped variable names(attribute) for ids in product repository in APPLICATION_SCOPE
 		String productIdsAttributeID = "productIds";
 		application.setAttribute(productIdsAttributeID, productEntries.keySet());
+		
 	}
 	
 	@Override
